@@ -19,10 +19,10 @@ featurizer = SentinelFeaturizer(image='image.tif',
                                 mask='mask.geojson')
                                 
 # Get feature vectors and labels with sliding window
-X, y = featurizer.get_features(window_size=3)
+x, y = featurizer.get_features(window_size=3)
 
 # Train model
-trained_model = train_model(X, y)
+trained_model = train_model(x, y)
 
 # Predict on new image
 predict(image='new_image_for_prediction.tif', model=model, window_size=3)
